@@ -1,1 +1,1 @@
-Private Hugging Face dataset: <fill in after upload>, files states_aya_seed42.npz and states_aya_seed1337.npz
+https://huggingface.co/datasets/Faruna01/multilingual-detox-mech-activations (private): states_aya_seed42.npz, states_aya_seed1337.npz
