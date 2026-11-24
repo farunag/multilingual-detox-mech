@@ -1,0 +1,28 @@
+{
+  "model_id": "CohereLabs/aya-23-8B",
+  "adapter_seed": 1337,
+  "locked_configuration": {
+    "model_id": "CohereLabs/aya-23-8B",
+    "adapter_seed": 1337,
+    "direction_source": "English training rows only",
+    "target_languages": [
+      "xh",
+      "yo"
+    ],
+    "direction_estimation_split": "train.csv",
+    "selection_split": "dev.csv",
+    "evaluation_split": "test.csv",
+    "selected_layer": 20,
+    "selected_alpha": 0.25,
+    "selection_method": "development-only automatic selection (same rule as primary_seed42)",
+    "frozen_test_not_used_for_selection": true
+  },
+  "direction_file": "artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/directions/train_only_directions_layer_20.pt",
+  "random_seed": 2042,
+  "orthogonal_cosine_with_english": 4.423782229423523e-09,
+  "test_examples": 133,
+  "conditions": [
+    "negative_english_transfer",
+    "orthogonal_random_direction"
+  ]
+}

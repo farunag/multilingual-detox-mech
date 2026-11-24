@@ -1,0 +1,938 @@
+name, memory.total [MiB]
+NVIDIA GeForce RTX 3090, 24576 MiB
+-rw-rw-r-- 1 root root 54560368 Nov 24 14:22 results/training_aya_23_8b/seed_1337/adapter/adapter_model.safetensors
+-rw-rw-r-- 1 root root 54560368 Nov 24 14:22 results/training_aya_23_8b/seed_42/adapter/adapter_model.safetensors
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+Note: Environment variable`HF_TOKEN` is set and is the current active token independently from the token you've just configured.
+
+=== 14:30 probes seed 42 ===
+/usr/local/lib/python3.12/dist-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next release, v1.0. You have Transformers 4.57.6. Please upgrade to Transformers >= 5.6.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Fetching 4 files:   0%|          | 0/4 [00:00<?, ?it/s]Fetching 4 files:  25%|██▌       | 1/4 [01:23<04:10, 83.63s/it]Fetching 4 files:  50%|█████     | 2/4 [01:47<01:47, 53.65s/it]Fetching 4 files:  75%|███████▌  | 3/4 [02:19<00:46, 46.52s/it]Fetching 4 files: 100%|██████████| 4/4 [02:20<00:00, 35.16s/it]Fetching 4 files: 100%|██████████| 4/4 [02:20<00:00, 35.16s/it]
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:04<00:12,  4.11s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:10,  5.06s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:15<00:05,  5.39s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  3.80s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  4.25s/it]
+/usr/local/lib/python3.12/dist-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  100/553
+  200/553
+  300/553
+  400/553
+  500/553
+  layer 2 done
+  layer 4 done
+  layer 6 done
+  layer 8 done
+  layer 10 done
+  layer 12 done
+  layer 14 done
+  layer 15 done
+  layer 16 done
+  layer 18 done
+  layer 20 done
+  layer 22 done
+  layer 24 done
+  layer 26 done
+  layer 28 done
+  layer 30 done
+  layer 32 done
+ layer               analysis                        subset  auc_mean   auc_sd  n_test
+    20             hr_grouped                            hr  0.912667 0.012064     252
+    20     hr_random_original                            hr  0.822153      NaN     252
+    20                   lolo                            am  0.587222      NaN     120
+    20                   lolo                            ar  0.825694      NaN     120
+    20                   lolo                            de  0.898333      NaN     120
+    20                   lolo                            en  0.966528      NaN     120
+    20                   lolo                            es  0.891111      NaN     120
+    20                   lolo                            hi  0.921389      NaN     120
+    20                   lolo                            uk  0.916528      NaN     120
+    20                   lolo                            xh  0.611808      NaN     136
+    20                   lolo                            yo  0.560237      NaN     130
+    20         pooled_grouped                           all  0.878614 0.009472     334
+    20 pooled_random_original                           all  0.837186      NaN     332
+    20  transfer_hr_to_target                         xh+yo  0.595483      NaN     266
+    20  transfer_hr_to_target xh+yo:afrihate_human_reviewed  0.608139      NaN     162
+    20  transfer_hr_to_target xh+yo:original_human_parallel  0.589127      NaN     104
+    20  transfer_hr_to_target    xh:afrihate_human_reviewed  0.650000      NaN      80
+    20  transfer_hr_to_target                        xh:all  0.617215      NaN     136
+    20  transfer_hr_to_target    xh:original_human_parallel  0.615434      NaN      56
+    20  transfer_hr_to_target    yo:afrihate_human_reviewed  0.583581      NaN      82
+    20  transfer_hr_to_target                        yo:all  0.565680      NaN     130
+    20  transfer_hr_to_target    yo:original_human_parallel  0.557292      NaN      48
+    20  within_target_grouped                            xh  0.718555 0.063369      28
+    20  within_target_grouped                         xh+yo  0.822923 0.046040      54
+    20  within_target_grouped                            yo  0.960947 0.033104      26
+
+=== 14:42 probes seed 1337 ===
+/usr/local/lib/python3.12/dist-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next release, v1.0. You have Transformers 4.57.6. Please upgrade to Transformers >= 5.6.
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:05<00:17,  5.97s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:12<00:13,  6.50s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:19<00:06,  6.44s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  4.59s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:20<00:00,  5.24s/it]
+/usr/local/lib/python3.12/dist-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  100/553
+  200/553
+  300/553
+  400/553
+  500/553
+  layer 2 done
+  layer 4 done
+  layer 6 done
+  layer 8 done
+  layer 10 done
+  layer 12 done
+  layer 14 done
+  layer 15 done
+  layer 16 done
+  layer 18 done
+  layer 20 done
+  layer 22 done
+  layer 24 done
+  layer 26 done
+  layer 28 done
+  layer 30 done
+  layer 32 done
+ layer               analysis                        subset  auc_mean   auc_sd  n_test
+    20             hr_grouped                            hr  0.908094 0.005916     252
+    20     hr_random_original                            hr  0.833743      NaN     252
+    20                   lolo                            am  0.583889      NaN     120
+    20                   lolo                            ar  0.813611      NaN     120
+    20                   lolo                            de  0.893611      NaN     120
+    20                   lolo                            en  0.960417      NaN     120
+    20                   lolo                            es  0.886111      NaN     120
+    20                   lolo                            hi  0.910556      NaN     120
+    20                   lolo                            uk  0.922639      NaN     120
+    20                   lolo                            xh  0.576557      NaN     136
+    20                   lolo                            yo  0.563314      NaN     130
+    20         pooled_grouped                           all  0.881814 0.010989     334
+    20 pooled_random_original                           all  0.839273      NaN     332
+    20  transfer_hr_to_target                         xh+yo  0.596925      NaN     266
+    20  transfer_hr_to_target xh+yo:afrihate_human_reviewed  0.642585      NaN     162
+    20  transfer_hr_to_target xh+yo:original_human_parallel  0.533284      NaN     104
+    20  transfer_hr_to_target    xh:afrihate_human_reviewed  0.648750      NaN      80
+    20  transfer_hr_to_target                        xh:all  0.616566      NaN     136
+    20  transfer_hr_to_target    xh:original_human_parallel  0.566327      NaN      56
+    20  transfer_hr_to_target    yo:afrihate_human_reviewed  0.679358      NaN      82
+    20  transfer_hr_to_target                        yo:all  0.602367      NaN     130
+    20  transfer_hr_to_target    yo:original_human_parallel  0.475694      NaN      48
+    20  within_target_grouped                            xh  0.766351 0.072837      28
+    20  within_target_grouped                         xh+yo  0.844666 0.022444      54
+    20  within_target_grouped                            yo  0.977515 0.010585      26
+
+=== 14:51 dev selection seed 1337 ===
+/usr/local/lib/python3.12/dist-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next release, v1.0. You have Transformers 4.57.6. Please upgrade to Transformers >= 5.6.
+  warnings.warn(
+Loading Aya model and adapter...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.89s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:09,  4.82s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:14<00:05,  5.16s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  3.67s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  4.08s/it]
+Estimating train-only directions...
+=== Direction layer 16 ===
+/usr/local/lib/python3.12/dist-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  layer=16 column=toxic_input: 50/280
+  layer=16 column=toxic_input: 100/280
+  layer=16 column=toxic_input: 150/280
+  layer=16 column=toxic_input: 200/280
+  layer=16 column=toxic_input: 250/280
+  layer=16 column=toxic_input: 280/280
+  layer=16 column=detox_output: 50/280
+  layer=16 column=detox_output: 100/280
+  layer=16 column=detox_output: 150/280
+  layer=16 column=detox_output: 200/280
+  layer=16 column=detox_output: 250/280
+  layer=16 column=detox_output: 280/280
+  layer=16 column=toxic_input: 50/317
+  layer=16 column=toxic_input: 100/317
+  layer=16 column=toxic_input: 150/317
+  layer=16 column=toxic_input: 200/317
+  layer=16 column=toxic_input: 250/317
+  layer=16 column=toxic_input: 300/317
+  layer=16 column=toxic_input: 317/317
+  layer=16 column=detox_output: 50/317
+  layer=16 column=detox_output: 100/317
+  layer=16 column=detox_output: 150/317
+  layer=16 column=detox_output: 200/317
+  layer=16 column=detox_output: 250/317
+  layer=16 column=detox_output: 300/317
+  layer=16 column=detox_output: 317/317
+  layer=16 column=toxic_input: 50/306
+  layer=16 column=toxic_input: 100/306
+  layer=16 column=toxic_input: 150/306
+  layer=16 column=toxic_input: 200/306
+  layer=16 column=toxic_input: 250/306
+  layer=16 column=toxic_input: 300/306
+  layer=16 column=toxic_input: 306/306
+  layer=16 column=detox_output: 50/306
+  layer=16 column=detox_output: 100/306
+  layer=16 column=detox_output: 150/306
+  layer=16 column=detox_output: 200/306
+  layer=16 column=detox_output: 250/306
+  layer=16 column=detox_output: 300/306
+  layer=16 column=detox_output: 306/306
+  layer=16 column=toxic_input: 50/280
+  layer=16 column=toxic_input: 100/280
+  layer=16 column=toxic_input: 150/280
+  layer=16 column=toxic_input: 200/280
+  layer=16 column=toxic_input: 250/280
+  layer=16 column=toxic_input: 280/280
+  layer=16 column=detox_output: 50/280
+  layer=16 column=detox_output: 100/280
+  layer=16 column=detox_output: 150/280
+  layer=16 column=detox_output: 200/280
+  layer=16 column=detox_output: 250/280
+  layer=16 column=detox_output: 280/280
+=== Direction layer 20 ===
+  layer=20 column=toxic_input: 50/280
+  layer=20 column=toxic_input: 100/280
+  layer=20 column=toxic_input: 150/280
+  layer=20 column=toxic_input: 200/280
+  layer=20 column=toxic_input: 250/280
+  layer=20 column=toxic_input: 280/280
+  layer=20 column=detox_output: 50/280
+  layer=20 column=detox_output: 100/280
+  layer=20 column=detox_output: 150/280
+  layer=20 column=detox_output: 200/280
+  layer=20 column=detox_output: 250/280
+  layer=20 column=detox_output: 280/280
+  layer=20 column=toxic_input: 50/317
+  layer=20 column=toxic_input: 100/317
+  layer=20 column=toxic_input: 150/317
+  layer=20 column=toxic_input: 200/317
+  layer=20 column=toxic_input: 250/317
+  layer=20 column=toxic_input: 300/317
+  layer=20 column=toxic_input: 317/317
+  layer=20 column=detox_output: 50/317
+  layer=20 column=detox_output: 100/317
+  layer=20 column=detox_output: 150/317
+  layer=20 column=detox_output: 200/317
+  layer=20 column=detox_output: 250/317
+  layer=20 column=detox_output: 300/317
+  layer=20 column=detox_output: 317/317
+  layer=20 column=toxic_input: 50/306
+  layer=20 column=toxic_input: 100/306
+  layer=20 column=toxic_input: 150/306
+  layer=20 column=toxic_input: 200/306
+  layer=20 column=toxic_input: 250/306
+  layer=20 column=toxic_input: 300/306
+  layer=20 column=toxic_input: 306/306
+  layer=20 column=detox_output: 50/306
+  layer=20 column=detox_output: 100/306
+  layer=20 column=detox_output: 150/306
+  layer=20 column=detox_output: 200/306
+  layer=20 column=detox_output: 250/306
+  layer=20 column=detox_output: 300/306
+  layer=20 column=detox_output: 306/306
+  layer=20 column=toxic_input: 50/280
+  layer=20 column=toxic_input: 100/280
+  layer=20 column=toxic_input: 150/280
+  layer=20 column=toxic_input: 200/280
+  layer=20 column=toxic_input: 250/280
+  layer=20 column=toxic_input: 280/280
+  layer=20 column=detox_output: 50/280
+  layer=20 column=detox_output: 100/280
+  layer=20 column=detox_output: 150/280
+  layer=20 column=detox_output: 200/280
+  layer=20 column=detox_output: 250/280
+  layer=20 column=detox_output: 280/280
+Running development selection sweep...
+  dev_en_transfer_l16_a0: 25/138
+  dev_en_transfer_l16_a0: 50/138
+  dev_en_transfer_l16_a0: 75/138
+  dev_en_transfer_l16_a0: 100/138
+  dev_en_transfer_l16_a0: 125/138
+  dev_en_transfer_l16_a0: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  40%|████      | 2/5 [00:00<00:00, 19.34it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 37.21it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.86it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 64.18it/s]
+  dev_en_transfer_l16_a0.25: 25/138
+  dev_en_transfer_l16_a0.25: 50/138
+  dev_en_transfer_l16_a0.25: 75/138
+  dev_en_transfer_l16_a0.25: 100/138
+  dev_en_transfer_l16_a0.25: 125/138
+  dev_en_transfer_l16_a0.25: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 67.59it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 54.71it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 60.46it/s]
+  dev_en_transfer_l16_a0.5: 25/138
+  dev_en_transfer_l16_a0.5: 50/138
+  dev_en_transfer_l16_a0.5: 75/138
+  dev_en_transfer_l16_a0.5: 100/138
+  dev_en_transfer_l16_a0.5: 125/138
+  dev_en_transfer_l16_a0.5: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 68.47it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 57.70it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 65.23it/s]
+  dev_en_transfer_l16_a1: 25/138
+  dev_en_transfer_l16_a1: 50/138
+  dev_en_transfer_l16_a1: 75/138
+  dev_en_transfer_l16_a1: 100/138
+  dev_en_transfer_l16_a1: 125/138
+  dev_en_transfer_l16_a1: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 67.48it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.86it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 62.35it/s]
+  dev_en_transfer_l16_a2: 25/138
+  dev_en_transfer_l16_a2: 50/138
+  dev_en_transfer_l16_a2: 75/138
+  dev_en_transfer_l16_a2: 100/138
+  dev_en_transfer_l16_a2: 125/138
+  dev_en_transfer_l16_a2: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 63.37it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.13it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 65.89it/s]
+  dev_en_transfer_l20_a0: 25/138
+  dev_en_transfer_l20_a0: 50/138
+  dev_en_transfer_l20_a0: 75/138
+  dev_en_transfer_l20_a0: 100/138
+  dev_en_transfer_l20_a0: 125/138
+  dev_en_transfer_l20_a0: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 66.05it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 59.03it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 63.27it/s]
+  dev_en_transfer_l20_a0.25: 25/138
+  dev_en_transfer_l20_a0.25: 50/138
+  dev_en_transfer_l20_a0.25: 75/138
+  dev_en_transfer_l20_a0.25: 100/138
+  dev_en_transfer_l20_a0.25: 125/138
+  dev_en_transfer_l20_a0.25: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 67.68it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 54.68it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 63.85it/s]
+  dev_en_transfer_l20_a0.5: 25/138
+  dev_en_transfer_l20_a0.5: 50/138
+  dev_en_transfer_l20_a0.5: 75/138
+  dev_en_transfer_l20_a0.5: 100/138
+  dev_en_transfer_l20_a0.5: 125/138
+  dev_en_transfer_l20_a0.5: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 59.28it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.11it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 63.32it/s]
+  dev_en_transfer_l20_a1: 25/138
+  dev_en_transfer_l20_a1: 50/138
+  dev_en_transfer_l20_a1: 75/138
+  dev_en_transfer_l20_a1: 100/138
+  dev_en_transfer_l20_a1: 125/138
+  dev_en_transfer_l20_a1: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 61.04it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 57.97it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 64.53it/s]
+  dev_en_transfer_l20_a2: 25/138
+  dev_en_transfer_l20_a2: 50/138
+  dev_en_transfer_l20_a2: 75/138
+  dev_en_transfer_l20_a2: 100/138
+  dev_en_transfer_l20_a2: 125/138
+  dev_en_transfer_l20_a2: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 61.15it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 56.04it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 64.73it/s]
+Development selection: {
+  "layer": 20,
+  "alpha": 0.25,
+  "selection_score": 0.2805586215417307,
+  "chrf_to_reference": 0.32769668530006546,
+  "labse_to_reference": 0.5505861476161557,
+  "labse_to_input": 0.5894628769154622,
+  "copy_input": 0.08634453781512605,
+  "empty_output": 0.0
+}
+{
+  "model_id": "CohereLabs/aya-23-8B",
+  "adapter_seed": 1337,
+  "direction_source": "English training rows only",
+  "target_languages": [
+    "xh",
+    "yo"
+  ],
+  "direction_estimation_split": "train.csv",
+  "selection_split": "dev.csv",
+  "evaluation_split": "test.csv",
+  "selected_layer": 20,
+  "selected_alpha": 0.25,
+  "selection_method": "development-only automatic selection (same rule as primary_seed42)",
+  "frozen_test_not_used_for_selection": true
+}
+
+=== 15:32 frozen test seed 1337 ===
+/usr/local/lib/python3.12/dist-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next release, v1.0. You have Transformers 4.57.6. Please upgrade to Transformers >= 5.6.
+  warnings.warn(
+Loading Aya model and adapter...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.98s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:09,  4.96s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:15<00:05,  5.23s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  3.70s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  4.13s/it]
+Estimating train-only directions...
+=== Direction layer 16 ===
+/usr/local/lib/python3.12/dist-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  layer=16 column=toxic_input: 50/280
+  layer=16 column=toxic_input: 100/280
+  layer=16 column=toxic_input: 150/280
+  layer=16 column=toxic_input: 200/280
+  layer=16 column=toxic_input: 250/280
+  layer=16 column=toxic_input: 280/280
+  layer=16 column=detox_output: 50/280
+  layer=16 column=detox_output: 100/280
+  layer=16 column=detox_output: 150/280
+  layer=16 column=detox_output: 200/280
+  layer=16 column=detox_output: 250/280
+  layer=16 column=detox_output: 280/280
+  layer=16 column=toxic_input: 50/317
+  layer=16 column=toxic_input: 100/317
+  layer=16 column=toxic_input: 150/317
+  layer=16 column=toxic_input: 200/317
+  layer=16 column=toxic_input: 250/317
+  layer=16 column=toxic_input: 300/317
+  layer=16 column=toxic_input: 317/317
+  layer=16 column=detox_output: 50/317
+  layer=16 column=detox_output: 100/317
+  layer=16 column=detox_output: 150/317
+  layer=16 column=detox_output: 200/317
+  layer=16 column=detox_output: 250/317
+  layer=16 column=detox_output: 300/317
+  layer=16 column=detox_output: 317/317
+  layer=16 column=toxic_input: 50/306
+  layer=16 column=toxic_input: 100/306
+  layer=16 column=toxic_input: 150/306
+  layer=16 column=toxic_input: 200/306
+  layer=16 column=toxic_input: 250/306
+  layer=16 column=toxic_input: 300/306
+  layer=16 column=toxic_input: 306/306
+  layer=16 column=detox_output: 50/306
+  layer=16 column=detox_output: 100/306
+  layer=16 column=detox_output: 150/306
+  layer=16 column=detox_output: 200/306
+  layer=16 column=detox_output: 250/306
+  layer=16 column=detox_output: 300/306
+  layer=16 column=detox_output: 306/306
+  layer=16 column=toxic_input: 50/280
+  layer=16 column=toxic_input: 100/280
+  layer=16 column=toxic_input: 150/280
+  layer=16 column=toxic_input: 200/280
+  layer=16 column=toxic_input: 250/280
+  layer=16 column=toxic_input: 280/280
+  layer=16 column=detox_output: 50/280
+  layer=16 column=detox_output: 100/280
+  layer=16 column=detox_output: 150/280
+  layer=16 column=detox_output: 200/280
+  layer=16 column=detox_output: 250/280
+  layer=16 column=detox_output: 280/280
+=== Direction layer 20 ===
+  layer=20 column=toxic_input: 50/280
+  layer=20 column=toxic_input: 100/280
+  layer=20 column=toxic_input: 150/280
+  layer=20 column=toxic_input: 200/280
+  layer=20 column=toxic_input: 250/280
+  layer=20 column=toxic_input: 280/280
+  layer=20 column=detox_output: 50/280
+  layer=20 column=detox_output: 100/280
+  layer=20 column=detox_output: 150/280
+  layer=20 column=detox_output: 200/280
+  layer=20 column=detox_output: 250/280
+  layer=20 column=detox_output: 280/280
+  layer=20 column=toxic_input: 50/317
+  layer=20 column=toxic_input: 100/317
+  layer=20 column=toxic_input: 150/317
+  layer=20 column=toxic_input: 200/317
+  layer=20 column=toxic_input: 250/317
+  layer=20 column=toxic_input: 300/317
+  layer=20 column=toxic_input: 317/317
+  layer=20 column=detox_output: 50/317
+  layer=20 column=detox_output: 100/317
+  layer=20 column=detox_output: 150/317
+  layer=20 column=detox_output: 200/317
+  layer=20 column=detox_output: 250/317
+  layer=20 column=detox_output: 300/317
+  layer=20 column=detox_output: 317/317
+  layer=20 column=toxic_input: 50/306
+  layer=20 column=toxic_input: 100/306
+  layer=20 column=toxic_input: 150/306
+  layer=20 column=toxic_input: 200/306
+  layer=20 column=toxic_input: 250/306
+  layer=20 column=toxic_input: 300/306
+  layer=20 column=toxic_input: 306/306
+  layer=20 column=detox_output: 50/306
+  layer=20 column=detox_output: 100/306
+  layer=20 column=detox_output: 150/306
+  layer=20 column=detox_output: 200/306
+  layer=20 column=detox_output: 250/306
+  layer=20 column=detox_output: 300/306
+  layer=20 column=detox_output: 306/306
+  layer=20 column=toxic_input: 50/280
+  layer=20 column=toxic_input: 100/280
+  layer=20 column=toxic_input: 150/280
+  layer=20 column=toxic_input: 200/280
+  layer=20 column=toxic_input: 250/280
+  layer=20 column=toxic_input: 280/280
+  layer=20 column=detox_output: 50/280
+  layer=20 column=detox_output: 100/280
+  layer=20 column=detox_output: 150/280
+  layer=20 column=detox_output: 200/280
+  layer=20 column=detox_output: 250/280
+  layer=20 column=detox_output: 280/280
+Generating frozen test conditions at layer=20, alpha=0.25
+  baseline: 25/133
+  baseline: 50/133
+  baseline: 75/133
+  baseline: 100/133
+  baseline: 125/133
+  baseline: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  40%|████      | 2/5 [00:00<00:00, 17.73it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 35.57it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 37.09it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 43.53it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 51.89it/s]
+  english_transfer: 25/133
+  english_transfer: 50/133
+  english_transfer: 75/133
+  english_transfer: 100/133
+  english_transfer: 125/133
+  english_transfer: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 52.02it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 36.60it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 42.97it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 51.73it/s]
+  within_language: 25/133
+  within_language: 50/133
+  within_language: 75/133
+  within_language: 100/133
+  within_language: 125/133
+  within_language: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 50.47it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 37.54it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 44.07it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 49.60it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 49.55it/s]
+  random_direction: 25/133
+  random_direction: 50/133
+  random_direction: 75/133
+  random_direction: 100/133
+  random_direction: 125/133
+  random_direction: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 51.31it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 36.72it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 43.02it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 50.87it/s]
+  shuffled_pair: 25/133
+  shuffled_pair: 50/133
+  shuffled_pair: 75/133
+  shuffled_pair: 100/133
+  shuffled_pair: 125/133
+  shuffled_pair: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 52.14it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 36.78it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 43.14it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 50.97it/s]
+{
+  "run_name": "replicate_seed1337",
+  "model_id": "CohereLabs/aya-23-8B",
+  "adapter_seed": 1337,
+  "selected_layer": 20,
+  "selected_alpha": 0.25,
+  "test_examples": 133,
+  "test_languages": [
+    "xh",
+    "yo"
+  ],
+  "conditions": [
+    "baseline",
+    "english_transfer",
+    "within_language",
+    "random_direction",
+    "shuffled_pair"
+  ],
+  "outputs": {
+    "generations_dir": "artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/test",
+    "metrics_summary": "artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/metrics/test_metrics_summary.csv",
+    "combined_metrics": "artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/metrics/test_metrics_all_conditions.csv"
+  }
+}
+
+=== 15:56 extra controls seed 1337 ===
+/usr/local/lib/python3.12/dist-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next release, v1.0. You have Transformers 4.57.6. Please upgrade to Transformers >= 5.6.
+  warnings.warn(
+English/orthogonal cosine: 4.423782229423523e-09
+Loading model...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:03<00:11,  3.84s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:09,  4.84s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:15<00:05,  5.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  3.69s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:16<00:00,  4.10s/it]
+Loading LaBSE...
+Generating negative_english_transfer...
+/usr/local/lib/python3.12/dist-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  negative_english_transfer: 25/133
+  negative_english_transfer: 50/133
+  negative_english_transfer: 75/133
+  negative_english_transfer: 100/133
+  negative_english_transfer: 125/133
+  negative_english_transfer: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  40%|████      | 2/5 [00:00<00:00, 17.75it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 35.78it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 38.27it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 44.82it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 49.33it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 49.28it/s]
+Generating orthogonal_random_direction...
+  orthogonal_random_direction: 25/133
+  orthogonal_random_direction: 50/133
+  orthogonal_random_direction: 75/133
+  orthogonal_random_direction: 100/133
+  orthogonal_random_direction: 125/133
+  orthogonal_random_direction: 133/133
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 50.55it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches:  80%|████████  | 4/5 [00:00<00:00, 36.30it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 42.70it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 49.65it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 49.60it/s]
+{
+  "model_id": "CohereLabs/aya-23-8B",
+  "adapter_seed": 1337,
+  "locked_configuration": {
+    "model_id": "CohereLabs/aya-23-8B",
+    "adapter_seed": 1337,
+    "direction_source": "English training rows only",
+    "target_languages": [
+      "xh",
+      "yo"
+    ],
+    "direction_estimation_split": "train.csv",
+    "selection_split": "dev.csv",
+    "evaluation_split": "test.csv",
+    "selected_layer": 20,
+    "selected_alpha": 0.25,
+    "selection_method": "development-only automatic selection (same rule as primary_seed42)",
+    "frozen_test_not_used_for_selection": true
+  },
+  "direction_file": "artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/directions/train_only_directions_layer_20.pt",
+  "random_seed": 2042,
+  "orthogonal_cosine_with_english": 4.423782229423523e-09,
+  "test_examples": 133,
+  "conditions": [
+    "negative_english_transfer",
+    "orthogonal_random_direction"
+  ]
+}
+                  condition language  n_examples  chrf_to_reference  labse_to_reference  labse_to_input  copy_input  copy_reference  empty_output  output_chars  output_words  unique_output_rate
+  negative_english_transfer       xh          68           0.312021            0.490488        0.559261    0.058824        0.000000           0.0     52.852941      6.867647            0.794118
+  negative_english_transfer       yo          65           0.334223            0.588239        0.543374    0.030769        0.015385           0.0     48.600000     10.323077            0.738462
+orthogonal_random_direction       xh          68           0.313005            0.492577        0.563544    0.058824        0.000000           0.0     52.705882      6.852941            0.808824
+orthogonal_random_direction       yo          65           0.329135            0.589464        0.547793    0.030769        0.015385           0.0     48.338462     10.353846            0.738462
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+/workspace/detox_rebuttal/repo/scripts/rebuttal/36p_paired_bootstrap.py:111: Pandas4Warning: The 'lsuffix' and 'rsuffix' keywords in DataFrame.join are deprecated and will be removed in a future version. Use the 'suffixes' keyword instead.
+  return left.join(
+Saved: artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/metrics/paired_bootstrap_results.csv
+Saved: artifacts/confirmatory_aya_2026_09_30/replicate_seed1337/metrics/paired_bootstrap_manifest.json
+
+Key paired results:
+language                                     comparison   left_condition             right_condition             metric  n_pairs  mean_paired_difference  ci95_low  ci95_high  ci_excludes_zero
+      xh                    english_transfer - baseline english_transfer                    baseline  chrf_to_reference       68                0.002487 -0.003573   0.010319             False
+      xh                    english_transfer - baseline english_transfer                    baseline labse_to_reference       68                0.002339 -0.009030   0.013449             False
+      xh                    english_transfer - baseline english_transfer                    baseline     labse_to_input       68                0.009134 -0.013647   0.033108             False
+      xh                    english_transfer - baseline english_transfer                    baseline         copy_input       68                0.014706  0.000000   0.044118             False
+      xh english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction  chrf_to_reference       68                0.001752 -0.003656   0.007613             False
+      xh english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction labse_to_reference       68                0.001844 -0.009228   0.012237             False
+      xh english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction     labse_to_input       68                0.000813 -0.019844   0.021293             False
+      xh english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction         copy_input       68                0.000000  0.000000   0.000000             False
+      xh   english_transfer - negative_english_transfer english_transfer   negative_english_transfer  chrf_to_reference       68                0.002736 -0.003997   0.010499             False
+      xh   english_transfer - negative_english_transfer english_transfer   negative_english_transfer labse_to_reference       68                0.003933 -0.008758   0.015738             False
+      xh   english_transfer - negative_english_transfer english_transfer   negative_english_transfer     labse_to_input       68                0.005096 -0.015973   0.026070             False
+      xh   english_transfer - negative_english_transfer english_transfer   negative_english_transfer         copy_input       68                0.000000  0.000000   0.000000             False
+      yo                    english_transfer - baseline english_transfer                    baseline  chrf_to_reference       65                0.000377 -0.001503   0.002287             False
+      yo                    english_transfer - baseline english_transfer                    baseline labse_to_reference       65               -0.002758 -0.014956   0.005962             False
+      yo                    english_transfer - baseline english_transfer                    baseline     labse_to_input       65               -0.000376 -0.017296   0.017684             False
+      yo                    english_transfer - baseline english_transfer                    baseline         copy_input       65                0.000000  0.000000   0.000000             False
+      yo english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction  chrf_to_reference       65                0.000464 -0.000433   0.001712             False
+      yo english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction labse_to_reference       65                0.000844 -0.005957   0.007175             False
+      yo english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction     labse_to_input       65                0.004415 -0.007009   0.019987             False
+      yo english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction         copy_input       65                0.000000  0.000000   0.000000             False
+      yo   english_transfer - negative_english_transfer english_transfer   negative_english_transfer  chrf_to_reference       65               -0.004624 -0.014176   0.000726             False
+      yo   english_transfer - negative_english_transfer english_transfer   negative_english_transfer labse_to_reference       65                0.002069 -0.002616   0.007847             False
+      yo   english_transfer - negative_english_transfer english_transfer   negative_english_transfer     labse_to_input       65                0.008834 -0.004209   0.025787             False
+      yo   english_transfer - negative_english_transfer english_transfer   negative_english_transfer         copy_input       65                0.000000  0.000000   0.000000             False
+  pooled                    english_transfer - baseline english_transfer                    baseline  chrf_to_reference      133                0.001456 -0.001835   0.005541             False
+  pooled                    english_transfer - baseline english_transfer                    baseline labse_to_reference      133               -0.000152 -0.008661   0.007276             False
+  pooled                    english_transfer - baseline english_transfer                    baseline     labse_to_input      133                0.004486 -0.010081   0.018872             False
+  pooled                    english_transfer - baseline english_transfer                    baseline         copy_input      133                0.007519  0.000000   0.022556             False
+  pooled english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction  chrf_to_reference      133                0.001123 -0.001636   0.004263             False
+  pooled english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction labse_to_reference      133                0.001355 -0.005230   0.007602             False
+  pooled english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction     labse_to_input      133                0.002573 -0.009635   0.015624             False
+  pooled english_transfer - orthogonal_random_direction english_transfer orthogonal_random_direction         copy_input      133                0.000000  0.000000   0.000000             False
+  pooled   english_transfer - negative_english_transfer english_transfer   negative_english_transfer  chrf_to_reference      133               -0.000861 -0.006856   0.004372             False
+  pooled   english_transfer - negative_english_transfer english_transfer   negative_english_transfer labse_to_reference      133                0.003022 -0.004013   0.009815             False
+  pooled   english_transfer - negative_english_transfer english_transfer   negative_english_transfer     labse_to_input      133                0.006923 -0.005738   0.020174             False
+  pooled   english_transfer - negative_english_transfer english_transfer   negative_english_transfer         copy_input      133                0.000000  0.000000   0.000000             False
+language                  source                                     comparison            metric   n    mean  ci_low  ci_high  excludes_zero
+      xh original_human_parallel                    english_transfer - baseline chrf_to_reference  28 -0.0090 -0.0262   0.0080          False
+      xh original_human_parallel english_transfer - orthogonal_random_direction chrf_to_reference  28 -0.0088 -0.0310   0.0114          False
+      xh afrihate_human_reviewed                    english_transfer - baseline chrf_to_reference  40  0.0073 -0.0083   0.0231          False
+      xh afrihate_human_reviewed english_transfer - orthogonal_random_direction chrf_to_reference  40  0.0044 -0.0131   0.0219          False
+      xh                     all                    english_transfer - baseline chrf_to_reference  68  0.0006 -0.0110   0.0125          False
+      xh                     all english_transfer - orthogonal_random_direction chrf_to_reference  68 -0.0010 -0.0148   0.0121          False
+      yo original_human_parallel                    english_transfer - baseline chrf_to_reference  24  0.0005 -0.0022   0.0035          False
+      yo original_human_parallel english_transfer - orthogonal_random_direction chrf_to_reference  24  0.0061 -0.0027   0.0212          False
+      yo afrihate_human_reviewed                    english_transfer - baseline chrf_to_reference  41 -0.0455 -0.0764  -0.0186           True
+      yo afrihate_human_reviewed english_transfer - orthogonal_random_direction chrf_to_reference  41 -0.0316 -0.0590  -0.0090           True
+      yo                     all                    english_transfer - baseline chrf_to_reference  65 -0.0285 -0.0494  -0.0111           True
+      yo                     all english_transfer - orthogonal_random_direction chrf_to_reference  65 -0.0177 -0.0365  -0.0018           True
+  pooled original_human_parallel                    english_transfer - baseline chrf_to_reference  52 -0.0046 -0.0142   0.0046          False
+  pooled original_human_parallel english_transfer - orthogonal_random_direction chrf_to_reference  52 -0.0019 -0.0156   0.0113          False
+  pooled afrihate_human_reviewed                    english_transfer - baseline chrf_to_reference  81 -0.0194 -0.0378  -0.0027           True
+  pooled afrihate_human_reviewed english_transfer - orthogonal_random_direction chrf_to_reference  81 -0.0138 -0.0309   0.0015          False
+  pooled                     all                    english_transfer - baseline chrf_to_reference 133 -0.0137 -0.0255  -0.0028           True
+  pooled                     all english_transfer - orthogonal_random_direction chrf_to_reference 133 -0.0092 -0.0210   0.0012          False
+language                  source                                     comparison            metric   n    mean  ci_low  ci_high  excludes_zero
+      xh original_human_parallel                    english_transfer - baseline chrf_to_reference  28 -0.0019 -0.0108   0.0042          False
+      xh original_human_parallel english_transfer - orthogonal_random_direction chrf_to_reference  28 -0.0016 -0.0116   0.0064          False
+      xh afrihate_human_reviewed                    english_transfer - baseline chrf_to_reference  40  0.0055 -0.0024   0.0174          False
+      xh afrihate_human_reviewed english_transfer - orthogonal_random_direction chrf_to_reference  40  0.0041 -0.0014   0.0121          False
+      xh                     all                    english_transfer - baseline chrf_to_reference  68  0.0025 -0.0037   0.0103          False
+      xh                     all english_transfer - orthogonal_random_direction chrf_to_reference  68  0.0018 -0.0036   0.0078          False
+      yo original_human_parallel                    english_transfer - baseline chrf_to_reference  24  0.0026  0.0000   0.0066          False
+      yo original_human_parallel english_transfer - orthogonal_random_direction chrf_to_reference  24  0.0019 -0.0000   0.0052          False
+      yo afrihate_human_reviewed                    english_transfer - baseline chrf_to_reference  41 -0.0009 -0.0033   0.0008          False
+      yo afrihate_human_reviewed english_transfer - orthogonal_random_direction chrf_to_reference  41 -0.0004 -0.0011   0.0000          False
+      yo                     all                    english_transfer - baseline chrf_to_reference  65  0.0004 -0.0015   0.0023          False
+      yo                     all english_transfer - orthogonal_random_direction chrf_to_reference  65  0.0005 -0.0004   0.0017          False
+  pooled original_human_parallel                    english_transfer - baseline chrf_to_reference  52  0.0002 -0.0051   0.0040          False
+  pooled original_human_parallel english_transfer - orthogonal_random_direction chrf_to_reference  52  0.0000 -0.0054   0.0045          False
+  pooled afrihate_human_reviewed                    english_transfer - baseline chrf_to_reference  81  0.0023 -0.0019   0.0082          False
+  pooled afrihate_human_reviewed english_transfer - orthogonal_random_direction chrf_to_reference  81  0.0018 -0.0009   0.0062          False
+  pooled                     all                    english_transfer - baseline chrf_to_reference 133  0.0015 -0.0018   0.0055          False
+  pooled                     all english_transfer - orthogonal_random_direction chrf_to_reference 133  0.0011 -0.0017   0.0043          False
+
+=== 16:04 DONE core set -> /workspace/detox_rebuttal/rebuttal_results.zip ===
+
+=== 16:04 wide alpha dev ===
+/usr/local/lib/python3.12/dist-packages/peft/import_utils.py:52: FutureWarning: Support for Transformers < 5.6 is deprecated in PEFT and will be removed in the next release, v1.0. You have Transformers 4.57.6. Please upgrade to Transformers >= 5.6.
+  warnings.warn(
+Loading Aya model and adapter...
+`torch_dtype` is deprecated! Use `dtype` instead!
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:04<00:12,  4.03s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:10,  5.08s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:15<00:05,  5.43s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  3.84s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  4.28s/it]
+Estimating train-only directions...
+=== Direction layer 16 ===
+/usr/local/lib/python3.12/dist-packages/triton/knobs.py:504: UserWarning: TRITON_DEFAULT_FP_FUSION is unset: defaulting to FP fusion ENABLED for backward compatibility in Triton 3.9. The default will change to DISABLED in Triton 3.10; set TRITON_DEFAULT_FP_FUSION=1 to keep fusion enabled or =0 to adopt the new default early and silence this warning.
+  warn_once(FP_FUSION_DEFAULT_WARNING)
+  layer=16 column=toxic_input: 50/280
+  layer=16 column=toxic_input: 100/280
+  layer=16 column=toxic_input: 150/280
+  layer=16 column=toxic_input: 200/280
+  layer=16 column=toxic_input: 250/280
+  layer=16 column=toxic_input: 280/280
+  layer=16 column=detox_output: 50/280
+  layer=16 column=detox_output: 100/280
+  layer=16 column=detox_output: 150/280
+  layer=16 column=detox_output: 200/280
+  layer=16 column=detox_output: 250/280
+  layer=16 column=detox_output: 280/280
+  layer=16 column=toxic_input: 50/317
+  layer=16 column=toxic_input: 100/317
+  layer=16 column=toxic_input: 150/317
+  layer=16 column=toxic_input: 200/317
+  layer=16 column=toxic_input: 250/317
+  layer=16 column=toxic_input: 300/317
+  layer=16 column=toxic_input: 317/317
+  layer=16 column=detox_output: 50/317
+  layer=16 column=detox_output: 100/317
+  layer=16 column=detox_output: 150/317
+  layer=16 column=detox_output: 200/317
+  layer=16 column=detox_output: 250/317
+  layer=16 column=detox_output: 300/317
+  layer=16 column=detox_output: 317/317
+  layer=16 column=toxic_input: 50/306
+  layer=16 column=toxic_input: 100/306
+  layer=16 column=toxic_input: 150/306
+  layer=16 column=toxic_input: 200/306
+  layer=16 column=toxic_input: 250/306
+  layer=16 column=toxic_input: 300/306
+  layer=16 column=toxic_input: 306/306
+  layer=16 column=detox_output: 50/306
+  layer=16 column=detox_output: 100/306
+  layer=16 column=detox_output: 150/306
+  layer=16 column=detox_output: 200/306
+  layer=16 column=detox_output: 250/306
+  layer=16 column=detox_output: 300/306
+  layer=16 column=detox_output: 306/306
+  layer=16 column=toxic_input: 50/280
+  layer=16 column=toxic_input: 100/280
+  layer=16 column=toxic_input: 150/280
+  layer=16 column=toxic_input: 200/280
+  layer=16 column=toxic_input: 250/280
+  layer=16 column=toxic_input: 280/280
+  layer=16 column=detox_output: 50/280
+  layer=16 column=detox_output: 100/280
+  layer=16 column=detox_output: 150/280
+  layer=16 column=detox_output: 200/280
+  layer=16 column=detox_output: 250/280
+  layer=16 column=detox_output: 280/280
+=== Direction layer 20 ===
+  layer=20 column=toxic_input: 50/280
+  layer=20 column=toxic_input: 100/280
+  layer=20 column=toxic_input: 150/280
+  layer=20 column=toxic_input: 200/280
+  layer=20 column=toxic_input: 250/280
+  layer=20 column=toxic_input: 280/280
+  layer=20 column=detox_output: 50/280
+  layer=20 column=detox_output: 100/280
+  layer=20 column=detox_output: 150/280
+  layer=20 column=detox_output: 200/280
+  layer=20 column=detox_output: 250/280
+  layer=20 column=detox_output: 280/280
+  layer=20 column=toxic_input: 50/317
+  layer=20 column=toxic_input: 100/317
+  layer=20 column=toxic_input: 150/317
+  layer=20 column=toxic_input: 200/317
+  layer=20 column=toxic_input: 250/317
+  layer=20 column=toxic_input: 300/317
+  layer=20 column=toxic_input: 317/317
+  layer=20 column=detox_output: 50/317
+  layer=20 column=detox_output: 100/317
+  layer=20 column=detox_output: 150/317
+  layer=20 column=detox_output: 200/317
+  layer=20 column=detox_output: 250/317
+  layer=20 column=detox_output: 300/317
+  layer=20 column=detox_output: 317/317
+  layer=20 column=toxic_input: 50/306
+  layer=20 column=toxic_input: 100/306
+  layer=20 column=toxic_input: 150/306
+  layer=20 column=toxic_input: 200/306
+  layer=20 column=toxic_input: 250/306
+  layer=20 column=toxic_input: 300/306
+  layer=20 column=toxic_input: 306/306
+  layer=20 column=detox_output: 50/306
+  layer=20 column=detox_output: 100/306
+  layer=20 column=detox_output: 150/306
+  layer=20 column=detox_output: 200/306
+  layer=20 column=detox_output: 250/306
+  layer=20 column=detox_output: 300/306
+  layer=20 column=detox_output: 306/306
+  layer=20 column=toxic_input: 50/280
+  layer=20 column=toxic_input: 100/280
+  layer=20 column=toxic_input: 150/280
+  layer=20 column=toxic_input: 200/280
+  layer=20 column=toxic_input: 250/280
+  layer=20 column=toxic_input: 280/280
+  layer=20 column=detox_output: 50/280
+  layer=20 column=detox_output: 100/280
+  layer=20 column=detox_output: 150/280
+  layer=20 column=detox_output: 200/280
+  layer=20 column=detox_output: 250/280
+  layer=20 column=detox_output: 280/280
+Running development selection sweep...
+  dev_en_transfer_l16_a0: 25/138
+  dev_en_transfer_l16_a0: 50/138
+  dev_en_transfer_l16_a0: 75/138
+  dev_en_transfer_l16_a0: 100/138
+  dev_en_transfer_l16_a0: 125/138
+  dev_en_transfer_l16_a0: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 52.31it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 59.39it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 66.11it/s]
+  dev_en_transfer_l16_a3: 25/138
+  dev_en_transfer_l16_a3: 50/138
+  dev_en_transfer_l16_a3: 75/138
+  dev_en_transfer_l16_a3: 100/138
+  dev_en_transfer_l16_a3: 125/138
+  dev_en_transfer_l16_a3: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.51it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.77it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 63.59it/s]
+  dev_en_transfer_l16_a4: 25/138
+  dev_en_transfer_l16_a4: 50/138
+  dev_en_transfer_l16_a4: 75/138
+  dev_en_transfer_l16_a4: 100/138
+  dev_en_transfer_l16_a4: 125/138
+  dev_en_transfer_l16_a4: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 67.17it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 54.63it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 68.76it/s]
+  dev_en_transfer_l16_a8: 25/138
+  dev_en_transfer_l16_a8: 50/138
+  dev_en_transfer_l16_a8: 75/138
+  dev_en_transfer_l16_a8: 100/138
+  dev_en_transfer_l16_a8: 125/138
+  dev_en_transfer_l16_a8: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 65.72it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 54.61it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 68.17it/s]
+  dev_en_transfer_l20_a0: 25/138
+  dev_en_transfer_l20_a0: 50/138
+  dev_en_transfer_l20_a0: 75/138
+  dev_en_transfer_l20_a0: 100/138
+  dev_en_transfer_l20_a0: 125/138
+  dev_en_transfer_l20_a0: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 69.94it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.32it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 66.76it/s]
+  dev_en_transfer_l20_a3: 25/138
+  dev_en_transfer_l20_a3: 50/138
+  dev_en_transfer_l20_a3: 75/138
+  dev_en_transfer_l20_a3: 100/138
+  dev_en_transfer_l20_a3: 125/138
+  dev_en_transfer_l20_a3: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 57.20it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 55.36it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 67.54it/s]
+  dev_en_transfer_l20_a4: 25/138
+  dev_en_transfer_l20_a4: 50/138
+  dev_en_transfer_l20_a4: 75/138
+  dev_en_transfer_l20_a4: 100/138
+  dev_en_transfer_l20_a4: 125/138
+  dev_en_transfer_l20_a4: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 55.29it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 55.76it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 66.56it/s]
+  dev_en_transfer_l20_a8: 25/138
+  dev_en_transfer_l20_a8: 50/138
+  dev_en_transfer_l20_a8: 75/138
+  dev_en_transfer_l20_a8: 100/138
+  dev_en_transfer_l20_a8: 125/138
+  dev_en_transfer_l20_a8: 138/138
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 58.99it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 55.35it/s]
+Batches:   0%|          | 0/5 [00:00<?, ?it/s]Batches: 100%|██████████| 5/5 [00:00<00:00, 69.60it/s]
+Development selection: {
+  "layer": 16,
+  "alpha": 0.0,
+  "selection_score": 0.26111448722656394,
+  "chrf_to_reference": 0.3071186684797575,
+  "labse_to_reference": 0.5145991756815558,
+  "labse_to_input": 0.5678841584557746,
+  "copy_input": 0.0722689075630252,
+  "empty_output": 0.0
+}
+
+=== 16:38 DONE all -> /workspace/detox_rebuttal/rebuttal_results.zip ===

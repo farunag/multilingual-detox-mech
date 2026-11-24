@@ -1,0 +1,159 @@
+{
+  "selected": {
+    "layer": 16,
+    "alpha": 0.0,
+    "selection_score": 0.26111448722656394,
+    "chrf_to_reference": 0.3071186684797575,
+    "labse_to_reference": 0.5145991756815558,
+    "labse_to_input": 0.5678841584557746,
+    "copy_input": 0.0722689075630252,
+    "empty_output": 0.0
+  },
+  "all_pooled": [
+    {
+      "layer": 16,
+      "alpha": 0.0,
+      "chrf_to_reference": 0.3071186684797575,
+      "labse_to_reference": 0.5145991756815558,
+      "labse_to_input": 0.5678841584557746,
+      "copy_input": 0.0722689075630252,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 16,
+      "alpha": 3.0,
+      "chrf_to_reference": 0.2954527085382667,
+      "labse_to_reference": 0.50421806319515,
+      "labse_to_input": 0.5561680854063387,
+      "copy_input": 0.06491596638655463,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 16,
+      "alpha": 4.0,
+      "chrf_to_reference": 0.2972749795752518,
+      "labse_to_reference": 0.498851870619418,
+      "labse_to_input": 0.5433087360082555,
+      "copy_input": 0.06491596638655463,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 16,
+      "alpha": 8.0,
+      "chrf_to_reference": 0.2747825850390642,
+      "labse_to_reference": 0.4641345650004614,
+      "labse_to_input": 0.48637429790555675,
+      "copy_input": 0.0,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 0.0,
+      "chrf_to_reference": 0.3071186684797575,
+      "labse_to_reference": 0.5145991756815558,
+      "labse_to_input": 0.5678841584557746,
+      "copy_input": 0.0722689075630252,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 3.0,
+      "chrf_to_reference": 0.28333128032652855,
+      "labse_to_reference": 0.4770884877469923,
+      "labse_to_input": 0.5057445607226373,
+      "copy_input": 0.05777310924369748,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 4.0,
+      "chrf_to_reference": 0.2703113804417138,
+      "labse_to_reference": 0.4737164368735579,
+      "labse_to_input": 0.5001995376467767,
+      "copy_input": 0.022058823529411766,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 8.0,
+      "chrf_to_reference": 0.2536235944786935,
+      "labse_to_reference": 0.4279958298406368,
+      "labse_to_input": 0.4294808073125842,
+      "copy_input": 0.0,
+      "empty_output": 0.0
+    }
+  ],
+  "eligible": [
+    {
+      "layer": 16,
+      "alpha": 0.0,
+      "selection_score": 0.26111448722656394,
+      "chrf_to_reference": 0.3071186684797575,
+      "labse_to_reference": 0.5145991756815558,
+      "labse_to_input": 0.5678841584557746,
+      "copy_input": 0.0722689075630252,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 16,
+      "alpha": 3.0,
+      "selection_score": 0.2520437000751828,
+      "chrf_to_reference": 0.2954527085382667,
+      "labse_to_reference": 0.50421806319515,
+      "labse_to_input": 0.5561680854063387,
+      "copy_input": 0.06491596638655463,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 16,
+      "alpha": 4.0,
+      "selection_score": 0.2535319862257343,
+      "chrf_to_reference": 0.2972749795752518,
+      "labse_to_reference": 0.498851870619418,
+      "labse_to_input": 0.5433087360082555,
+      "copy_input": 0.06491596638655463,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 0.0,
+      "selection_score": 0.26111448722656394,
+      "chrf_to_reference": 0.3071186684797575,
+      "labse_to_reference": 0.5145991756815558,
+      "labse_to_input": 0.5678841584557746,
+      "copy_input": 0.0722689075630252,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 3.0,
+      "selection_score": 0.2431751377057047,
+      "chrf_to_reference": 0.28333128032652855,
+      "labse_to_reference": 0.4770884877469923,
+      "labse_to_input": 0.5057445607226373,
+      "copy_input": 0.05777310924369748,
+      "empty_output": 0.0
+    },
+    {
+      "layer": 20,
+      "alpha": 4.0,
+      "selection_score": 0.23394129991923357,
+      "chrf_to_reference": 0.2703113804417138,
+      "labse_to_reference": 0.4737164368735579,
+      "labse_to_input": 0.5001995376467767,
+      "copy_input": 0.022058823529411766,
+      "empty_output": 0.0
+    }
+  ],
+  "candidate_layers": [
+    16,
+    20
+  ],
+  "candidate_strengths": [
+    0.0,
+    3.0,
+    4.0,
+    8.0
+  ],
+  "selection_rule": "Reject configurations with elevated empty-output rate, input-copy rate > baseline + 0.05, or LaBSE-to-reference < baseline - 0.05; among remaining configurations maximize 0.70*chrF_ref + 0.20*LaBSE_ref - 0.10*LaBSE_input."
+}

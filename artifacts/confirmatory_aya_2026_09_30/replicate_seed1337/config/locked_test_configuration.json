@@ -1,0 +1,16 @@
+{
+  "model_id": "CohereLabs/aya-23-8B",
+  "adapter_seed": 1337,
+  "direction_source": "English training rows only",
+  "target_languages": [
+    "xh",
+    "yo"
+  ],
+  "direction_estimation_split": "train.csv",
+  "selection_split": "dev.csv",
+  "evaluation_split": "test.csv",
+  "selected_layer": 20,
+  "selected_alpha": 0.25,
+  "selection_method": "development-only automatic selection (same rule as primary_seed42)",
+  "frozen_test_not_used_for_selection": true
+}
